@@ -10,11 +10,12 @@ public class ProductoDigital extends Producto {
     // R2: El costo de envió debe ser siempre cero ya que se entregan mediante un enlace de descarga
     @Override
     public double calcularCostoEnvio() {
-        return 0.0;
+        return 0;
     }
 
     // Getter y Setter de enlace de descarga
     public String getEnlaceDescarga() {
+
         return enlaceDescarga;
     }
 

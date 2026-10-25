@@ -22,6 +22,8 @@ public abstract class Producto {
 
 
     // Método para actualizar el stock (restar cuando se compra)
+
+
     public void actualizarStock(int cantidad) {
         this.stock -= cantidad;
     }

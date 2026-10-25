@@ -29,6 +29,8 @@ public class Pedido {
         this.detalles = new ArrayList<>();
         this.cliente = cliente;
 
+
+
         // Sincroniza automáticamente la relación bidireccional
         if (cliente != null) {
             cliente.agregarPedido(this);

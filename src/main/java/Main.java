@@ -13,6 +13,11 @@ public class Main {
         // 3. Agregar productos al inventario
         inventario.agregarProducto(mouse, teclado, curso);
 
+        //4. Verificar Stock
+        inventario.hayStock("P001", 4);
+
+
+
         // 4. Crear el cliente
         Cliente cliente = new Cliente(1, "Juan Perez", "juan@correo.com");
 

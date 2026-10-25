@@ -1,54 +1,51 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Inventario {
 
-    // Lista que guardará todos los productos (sean físicos o digitales)
     private List<Producto> productos;
 
     public Inventario() {
         this.productos = new ArrayList<>();
     }
-D
 
-    // 1. Agregar un producto nuevo al catálogo
-
+    // Agregar productos al inventario
     public void agregarProducto(Producto... productos) {
         for (Producto p : productos) {
             if (p != null) {
                 this.productos.add(p);
-                System.out.println(p.getCodigo() + "---"  + p.getNombre());
-
             }
         }
     }
 
-
-    // 2. Buscar un producto por su código especifico
-
+    // Buscar un producto por su código
     public Producto buscarProductoPorCodigo(String codigo) {
+        if (codigo == null) {
+            return null;
+        }
+
         for (Producto p : this.productos) {
             if (p.getCodigo().equalsIgnoreCase(codigo)) {
-                System.out.println("Producto encontrado" );
-                return p; // Lo encontró
+                return p;
             }
         }
-        return null; // No existe
+
+        return null;
     }
 
-
-
-    // R1: Sistema debe verificar que la cantidad solicitada de un producto este disponible en el inventario
+    // Verificar si hay stock disponible
     public boolean hayStock(String codigo, int cantidadRequerida) {
-        Producto p = buscarProductoPorCodigo(codigo);
-        if (p != null && p.getStock() >= cantidadRequerida) {
-            System.out.println("Hay stock");
+
+        if (cantidadRequerida <= 0) {
+            return false;
         }
-        //Si el cliente intenta comprar mas unidades de las existentes la operación se rechaza y muestra error de inventario insuficiente
 
-        return false;
+        Producto p = buscarProductoPorCodigo(codigo);
+
+        return p != null && p.getStock() >= cantidadRequerida;
     }
-
-
-
 }
+
+
+

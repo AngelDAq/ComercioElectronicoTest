@@ -18,6 +18,7 @@ public class ProductoFisico extends Producto {
 
     // Getter y Setter de peso
     public double getPeso() {
+
         return peso;
     }
 
