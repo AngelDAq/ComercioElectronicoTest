@@ -24,4 +24,51 @@ Directorio de Pruebas (/test): Contiene la suite de pruebas unitarias desarrolla
 
 
 
+Estructura del repositorio
 
+ProyectoJava/
+├── src/
+│   ├── main/
+│   │   └── java/       # Código del proyecto
+│   └── test/
+│       └── java/       # Pruebas unitarias
+├── README.md           # Documentación
+└── pom.xml             # Solo si utilizan Maven
+
+
+
+Instrucciones para compilar
+
+Si el proyecto utiliza Maven:
+
+mvn compile
+
+Si utiliza Gradle:
+
+./gradlew build
+
+Si no utiliza ninguna de estas herramientas, indicar cómo compilarlo desde IntelliJ IDEA.
+
+6. Cómo ejecutar las pruebas
+
+Si utiliza Maven:
+
+mvn test
+
+Si utiliza Gradle:
+
+./gradlew test
+
+También es posible ejecutar las pruebas desde IntelliJ IDEA, abriendo las clases de prueba y seleccionando la opción para ejecutarlas.
+
+7. Integrantes
+
+Integrante 1: Angel Daniel Quintero Roa
+
+Integrante 2: Juan David Morales Muñoz
+
+Integrante 3: Angelly Natalia Garavito Mendoza
+
+8. Enlace al documento
+
+   https://docs.google.com/document/d/1uerq0dxBdADHxE5IB75loWn7OjG8ok1y/edit?usp=sharing&ouid=110457268982351531222&rtpof=true&sd=true
